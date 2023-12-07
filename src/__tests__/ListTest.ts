@@ -8,8 +8,14 @@ export function test_list(list: List<number>): void {
     expect(list.length).toEqual(2);
 
     list.append(11);
+    // console.log("before test a", list.length);
+    // console.log("BEFORE", list);
     expect(list.removeAt(1)).toEqual(9);
+    // console.log("AFTER", list);
+    console.log("in test a");
+    // console.log("before test b", list.length);
     expect(list.remove(9)).toEqual(undefined);
+    console.log("in test b");
     expect(list.removeAt(0)).toEqual(5);
     expect(list.removeAt(0)).toEqual(11);
     expect(list.length).toEqual(0);
